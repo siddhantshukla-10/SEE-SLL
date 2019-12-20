@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+    function f1(){
+      var a = document.getElementById("price");
+      var price = a.options[a.selectedIndex].value;
+      var qty = document.getElementById("qty").value;
+      var amount = Number(price) * Number(qty);
+      document.getElementById("amount").innerHTML = amount;
+    }
+    function f2(){
+      alert("Amount Paid");
+    }
+  </script>
+</head>
+<body>
+  <input type="text" placeholder="ITEM NAME">
+  <input type="number" placeholder="ITEM QUANTITY" id="qty">
+  <select id="price">
+    <option></option>
+    <option>100</option>
+    <option>200</option>
+    <option>300</option>
+  </select>
+  <input type="submit" value="Submit" onclick="f1()">
+  <input type="submit" value="Paid" onclick="f2()">
+  <h5>Total amount: Rs <span id="amount"></span></h5>
+</body> 
+</html>

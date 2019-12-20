@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h1>SHOPPING APP</h1>
+
+  <form action="{{url_for('store')}}" method="POST">
+    EGGs:- <input type="number" name="eggs" min="0" value="0"><br><br>
+    Milk:- <input type="number" name="milk" min="0" value="0"><br><br>
+    Bread:- <input type="number" name="bread" min="0" value="0"><br><br>
+    <input type="submit" value="Add to Cart">
+  </form>
+
+  <a href="{{url_for('cart')}}">View your shopping cart!</a>
+</body>
+</html>

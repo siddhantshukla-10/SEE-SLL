@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h1>STUDENT REGISTRATION APP</h1>
+
+  <h3>{{msg}}</h3>
+
+  <form action="{{url_for('index')}}" method="POST" id="t">
+    USN: <input type="text" name="usn"><br><br>
+    DOB: <input type="text" name="dob"><br><br>
+    MARKS1: <input type="number" name="m1" value="0" min="0"><br>
+    MARKS2: <input type="number" name="m2" value="0" min="0"><br>
+    MARKS3: <input type="number" name="m3" value="0" min="0"><br>
+
+    <input type="submit" name="Register" onclick="return validateForm(this)">
+  </form>
+
+
+  <script>
+    function validateForm(button){
+      var form = document.getElementById("t");
+      if(form.usn.value == ""){
+        alert("Enter usn!");
+        return false;
+      }
+      if(form.dob.value == ""){
+        alert("Enter dob");
+        return false;
+      }
+      if(form.m1.value==""){
+        alert("Enter marks 1");
+        return false;
+      }
+      if(form.m2.value==""){
+        alert("Enter marks 2");
+        return false;
+      }
+      if(form.m3.value==""){
+        alert("Enter marks 3");
+        return false;
+      }
+      return true;
+    }
+  </script>
+</body>
+</html>

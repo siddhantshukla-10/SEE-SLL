@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <table border="1">
+    <tr>
+      <th>
+        NAME
+      </th>
+      <th>
+        COUNTRY
+      </th>
+      <th>
+        TITLE
+      </th>
+      <th>
+        YEAR
+      </th>
+    </tr>
+    <tr>
+      <td id="name0"></td>
+      <td id="country0"></td>
+      <td id="title0"></td>
+      <td id="year0"></td>
+    </tr>
+    <tr>
+      <td id="name1"></td>
+      <td id="country1"></td>
+      <td id="title1"></td>
+      <td id="year1"></td>
+    </tr>
+  </table>
+  <p id="name2"></p>
+  <p id="country2"></p>
+  <p id="title2"></p>
+  <p id="year2"></p>
+  <p id="name3"></p>
+  <p id="country3"></p>
+  <p id="title3"></p>
+  <p id="year3"></p>
+
+  <script>
+    var data = [{
+      "name":"Siddhant",
+      "country":"USA",
+      "title":"2 states",
+      "year":2000
+    },
+    {
+      "name": "Vinayak",
+      "country": "IND",
+      "title": "3 states",
+      "year": 2001
+    },
+    {
+      "name": "Ankesh",
+      "country": "UAE",
+      "title": "4 states",
+      "year": 2002
+    },
+    {
+      "name": "Shirsh",
+      "country": "ARB",
+      "title": "5 states",
+      "year": 2003
+    }
+    ];
+    document.getElementById("name0").innerHTML = data[0].name;
+    document.getElementById("name1").innerHTML = data[1].name;
+    document.getElementById("name2").innerHTML = data[2].name;
+    document.getElementById("name3").innerHTML = data[3].name;
+
+    document.getElementById("country0").innerHTML = data[0].country;
+    document.getElementById("country1").innerHTML = data[1].country;
+    document.getElementById("country2").innerHTML = data[2].country;
+    document.getElementById("country3").innerHTML = data[3].country;
+
+    document.getElementById("title0").innerHTML = data[0].title;
+    document.getElementById("title1").innerHTML = data[1].title;
+    document.getElementById("title2").innerHTML = data[2].title;
+    document.getElementById("title3").innerHTML = data[3].title;
+
+    document.getElementById("year0").innerHTML = data[0].year;
+    document.getElementById("year1").innerHTML = data[1].year;
+    document.getElementById("year2").innerHTML = data[2].year;
+    document.getElementById("year3").innerHTML = data[3].year;
+  </script>
+</body>
+</html>

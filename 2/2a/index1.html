@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>
+	Document
+</title>
+<script>
+function f1(){
+var a = document.getElementById("price");
+var price = a.options[a.selectedIndex].value;
+var qty = document.getElementById("qty").value;
+var amount = Number(price) * Number(qty);
+document.getElementById("amount").innerHTML = amount;
+}
+function f2(){
+alert("Amount already paid");
+}
+</script>
+</head>
+<body>
+<input type="text" placeholder="ITEM NAME">
+<br><br>
+<input type="number" placeholder="ITEM Quantity" id="qty">
+<br><br>
+<select id="price">
+<option>100</option>
+<option>200</option>
+<option>300</option>
+</select>
+<br>
+<br>
+<input type="submit" value="Submit" onclick="f1()">
+<input type="submit" value="Paid" onclick="f2()">
+<p>Your total amount = Rs<span id="amount"></span></p>
+</body>
+</html>

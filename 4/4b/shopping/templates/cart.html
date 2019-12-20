@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h1>ITEMS IN YOUR CART</h1>
+
+  {% for item in cart %}
+  <h2>{{item["name"]}} -- {{item["quantity"]}}</h2>
+  {% endfor %}
+
+  <a href="{{url_for('buy')}}">View Your Bill!!!</a>
+  <a href="{{url_for('store')}}">Continue Shopping!!!</a>
+</body>
+</html>

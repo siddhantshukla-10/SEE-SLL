@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h1>ATM APP</h1>
+  <h3>{{balance}}</h3>
+  <h3>{{msg}}</h3>
+
+  <form action="{{url_for('index')}}" method="POST" id="atm">
+    AMOUNT: <input type="text" name="amount" required>
+    <input type="submit" name="action" value="Withdraw" onclick="return validateForm(this)">
+    <input type="submit" name="action" value="Deposit" onclick="return validateForm(this)">
+  </form>
+
+  <script>
+    var form = document.getElementById("atm");
+    function validateForm(button) {
+      if(form.amount.value == ""){
+        alert("Amount cannot be null");
+        return false;
+      }
+      else if(parseInt(form.amount.value)<0){
+        alert("Amount cannot be negative");
+        return false;
+      }
+      else if(button.value == "Withdraw" && parseInt(form.amount.value)>5000){
+        alert("Cannot withdraw more than 5000");
+        return false;
+      }
+      else if(button.value == "Deposit" && parseInt(form.amount.value)>10000){
+        alert("Cannot deposit more than 10000");
+        return false;
+      }
+      return true;
+    }
+  </script>
+</body>
+</html>
